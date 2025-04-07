@@ -1,9 +1,9 @@
 .base-calculator {
 	width: 80vw;
 	max-width: 35rem;
-	height: 85vh;
-	max-height: 42rem;
-	padding: 2rem;
+	height: 92vh;
+	max-height: 45rem;
+	padding: 1.5rem;
 	border-radius: 1rem;
 	background-color: #222;
 	display: flex;
@@ -22,6 +22,8 @@
 	font-size: 1rem;
 	text-transform: uppercase;
 	color: #fff;
+	height: 10vh;
+	max-height: 5rem;
 }
 
 .calculator-header strong {
@@ -80,7 +82,9 @@
 
 .calculator-keyboard {
 	width: 98%;
-	padding: 1rem;
+	height: 100%;
+	max-height: 65vh;
+	padding: 0.5rem;
 	background-color: #d0d0d0;
 	border-radius: 0.5rem;
 	box-shadow: inset 0px -0.125rem 0.3125rem rgba(0, 0, 0, 0.3);

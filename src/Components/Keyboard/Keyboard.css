@@ -1,29 +1,31 @@
 .keyboard {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	gap: 0.4rem; /* Ajustando espaçamento dos botões para parecer mais natural */
+	gap: 0.4rem;
+	max-height: 70vh;
+	height: 43vh;
 	width: 95%;
 	padding: 1rem;
+	@media (min-width: 700px) and (orientation: landscape) and (max-width: 1560px) {
+		height: 60vh;
+	}
 }
 
-/* Cada linha agora segue a grid principal */
 .keyboard-row {
 	display: contents;
 }
 
-/* Ajustamos o espaço na primeira linha para alinhar à direita */
 .keyboard-button:first-child {
 	justify-self: end;
 }
 
-/* Botão padrão */
 .keyboard-button {
 	width: 100%;
 	min-width: 4rem;
 	height: 4rem;
 	background-color: #555;
 	color: white;
-	font-size: 1.4rem; /* Ajustamos tamanho da fonte */
+	font-size: 1.4rem;
 	font-weight: bold;
 	border: black 0.3rem;
 	border-style: outset;
@@ -31,27 +33,22 @@
 	cursor: pointer;
 }
 
-/* O botão "+" agora ocupa duas linhas corretamente */
 .keyboard-button.larger {
 	grid-row: span 2;
-	height: 8.5rem; /* Ajuste para garantir ocupação vertical */
-
+	height: 8.5rem;
 	align-items: center;
 	justify-content: center;
 }
 
-/* Botão especial */
 .keyboard-button.orange {
 	background-color: #d16002;
 	padding-left: 1rem;
 }
 
-/* Botões numéricos mais escuros */
 .keyboard-button.dark {
 	background-color: #333;
 }
 
-/* Efeito de clique */
 .keyboard-button:active {
 	background-color: #777;
 }
